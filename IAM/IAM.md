@@ -7,6 +7,7 @@
 - 한 사용자가 여러 그룹에 속할 수 있다.
 - IAM users는 자신만의 자격 증명(사용자 이름 & 비밀번호, 혹은 액세스 키)을 통해 AWS 서비스에 액세스합니다.
 - IAM User groups는 IAM user만 포함시킬 수 있다.
+- IAM User를 작성한 직후엔, 아무런 권한도 갖고있지 않다. IAM 정책을 통해 권한을 부여할 필요가 있다.
 
 ### 사용자와 그룹을 생성하는 이유
 
@@ -73,7 +74,6 @@ iterm에서 aws configure로 정보 입력 후 aws iam list-users를 입력하�
 - IAM Role은 사용자와 같지만 실제 사람이 사용하도록 만들어 진 것이 아니고 AWS서비스에 의해 사용되도록 만들어 졌다.
     - ex) EC2 Instance를 생성한다. EC2 Instance는 AWS에서 어떤 작업을 수행하려고 할 수 있는데, 이를 위해 EC2 Instance에 권한을 부여해야 한다. 권한부여를 위해 IAM Role을 만들고 만든 Role을 EC2 Instance와 묶어 하나의 개체로 만들어서 AWS의 특정 정보에 접근하도록 한다.
 - Common Roles에는 ‘EC2 Instance Roles’, ‘Lamda Function Roles’, ‘Roles for CloudFormation’ 등이 있다.
-
 
 - 선택된 AWS Service만 알아두도록 하자.
 ![image1.png](IAM%20Users%20%26%20Groups%205ec096f3f65b4a70991fb88d66b1ef1f%2Fimage1.png)
